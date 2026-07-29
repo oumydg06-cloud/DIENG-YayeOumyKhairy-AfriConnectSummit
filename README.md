@@ -46,3 +46,5 @@ AfriConnect Summit est un site événementiel fictif réunissant développeurs, 
 - [Stable Diffusion Online](https://stablediffusionweb.com/) - generateur d'images IA
 - [Coolors](https://coolors.co/) — génération de palette de couleurs
 - [W3C Validator](https://validator.w3.org/) — validation du HTML
+
+## Fin du Projet
