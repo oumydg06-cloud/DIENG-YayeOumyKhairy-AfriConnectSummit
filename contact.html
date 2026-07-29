@@ -1,23 +1,216 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Contact</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 — Contact & Inscription</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AfriConnect<span>Summit</span></a>
+
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="programme.html">Programme</a>
+                <a href="intervenants.html">Intervenants</a>
+                <a href="contact.html" class="actif">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-theme" aria-label="Changer de thème">🌙</button>
+                <button class="burger" aria-label="Ouvrir le menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO INTERNE ===== -->
+        <section class="hero-interne">
+            <div class="container">
+                <h1>Inscription & Contact</h1>
+                <p class="fil-ariane"><a href="index.html">Accueil</a> &gt; <span>Contact</span></p>
+            </div>
+        </section>
+
+        <!-- ===== FORMULAIRE + INFOS ===== -->
+        <section class="section-contact">
+            <div class="container">
+                <div class="contact-zone">
+
+                    <!-- Formulaire à gauche -->
+                    <div class="contact-form">
+                        <h2 class="titre-section-gauche">Formulaire d'inscription</h2>
+
+                        <div class="message-succes">
+                            <i class="bi bi-check-circle-fill"></i> Votre inscription a bien été envoyée. À bientôt !
+                        </div>
+
+                        <form id="formulaire-inscription" novalidate>
+                            <div class="champ">
+                                <label for="nom">Nom complet</label>
+                                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom">
+                                <p class="message-erreur">Merci d'indiquer votre nom complet (3 caractères minimum).</p>
+                            </div>
+
+                            <div class="champ">
+                                <label for="email">Adresse email</label>
+                                <input type="email" id="email" name="email" placeholder="vous@exemple.com">
+                                <p class="message-erreur">Merci d'indiquer une adresse email valide.</p>
+                            </div>
+
+                            <div class="champ">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+221 77 000 00 00">
+                                <p class="message-erreur">Le numéro doit contenir au moins 8 chiffres.</p>
+                            </div>
+
+                            <div class="champ">
+                                <label for="participation">Type de participation</label>
+                                <select id="participation" name="participation">
+                                    <option value="">-- Choisissez une option --</option>
+                                    <option value="visiteur">Visiteur</option>
+                                    <option value="intervenant">Intervenant</option>
+                                    <option value="sponsor">Sponsor</option>
+                                    <option value="presse">Presse</option>
+                                </select>
+                                <p class="message-erreur">Merci de sélectionner un type de participation.</p>
+                            </div>
+
+                            <div class="champ">
+                                <label for="pays">Pays</label>
+                                <select id="pays" name="pays">
+                                    <option value="">-- Choisissez votre pays --</option>
+                                    <option value="senegal">Sénégal</option>
+                                    <option value="mali">Mali</option>
+                                    <option value="cote-ivoire">Côte d'Ivoire</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="maroc">Maroc</option>
+                                    <option value="kenya">Kenya</option>
+                                    <option value="cameroun">Cameroun</option>
+                                    <option value="burkina-faso">Burkina Faso</option>
+                                    <option value="togo">Togo</option>
+                                    <option value="benin">Bénin</option>
+                                </select>
+                                <p class="message-erreur">Merci de sélectionner votre pays.</p>
+                            </div>
+
+                            <div class="champ">
+                                <label for="message">Message / Motivation</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Dites-nous pourquoi vous souhaitez participer..."></textarea>
+                                <p class="message-erreur">Votre message doit contenir au moins 20 caractères.</p>
+                            </div>
+
+                            <button type="submit" class="btn btn-principal">Envoyer mon inscription</button>
+                        </form>
+                    </div>
+
+                    <!-- Informations à droite -->
+                    <div class="contact-infos">
+                        <h2 class="titre-section-gauche">Informations pratiques</h2>
+                        <ul>
+                            <li><i class="bi bi-geo-alt-fill"></i> Centre International de Conférences, Diamniadio, Dakar</li>
+                            <li><i class="bi bi-calendar-event-fill"></i> 12 - 14 mars 2027</li>
+                            <li><i class="bi bi-envelope-fill"></i> contact@africonnectsummit.africa</li>
+                            <li><i class="bi bi-telephone-fill"></i> +221 33 000 00 00</li>
+                        </ul>
+
+                        <iframe
+                            src="https://www.google.com/maps?q=Diamniadio%20Dakar%20Senegal&output=embed"
+                            title="Localisation d'AfriConnect Summit"
+                            loading="lazy"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ EN ACCORDÉON CSS PUR ===== -->
+        <section class="section-faq">
+            <div class="container">
+                <h2 class="titre-section">Questions fréquentes</h2>
+                <p class="sous-titre-section">Tout ce qu'il faut savoir avant de s'inscrire.</p>
+
+                <div class="faq">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1">
+                        <label class="faq-question" for="faq1">Combien coûte l'inscription ?</label>
+                        <p class="faq-reponse">L'inscription visiteur est gratuite. Les places intervenants et sponsors sont soumises à validation par l'équipe organisatrice.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2">
+                        <label class="faq-question" for="faq2">Le badge est-il envoyé par email ?</label>
+                        <p class="faq-reponse">Oui, votre badge numérique vous est envoyé par email dans les 48h suivant la validation de votre inscription.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3">
+                        <label class="faq-question" for="faq3">Puis-je modifier mon inscription ?</label>
+                        <p class="faq-reponse">Oui, il suffit de nous contacter par email en précisant votre nom complet et les informations à corriger.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq4">
+                        <label class="faq-question" for="faq4">Les sessions seront-elles enregistrées ?</label>
+                        <p class="faq-reponse">La majorité des sessions en salle A seront filmées et rendues disponibles après l'événement.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq5">
+                        <label class="faq-question" for="faq5">Y a-t-il un tarif étudiant ?</label>
+                        <p class="faq-reponse">Oui, un tarif réduit est proposé aux étudiants sur présentation d'une carte étudiante valide sur place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-contenu">
+                <div class="footer-colonne">
+                    <h4>AfriConnect Summit</h4>
+                    <p>La conférence tech panafricaine qui réunit développeurs, entrepreneurs et investisseurs du continent.</p>
+                    <div class="footer-reseaux">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-colonne">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-colonne">
+                    <h4>Contact</h4>
+                    <p><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</p>
+                    <p><i class="bi bi-envelope-fill"></i> contact@africonnectsummit.africa</p>
+                </div>
+            </div>
+            <p class="footer-bas">&copy; <span id="annee-actuelle"></span> AfriConnect Summit. Projet étudiant fictif.</p>
+        </div>
+    </footer>
+
+    <button class="retour-haut" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
